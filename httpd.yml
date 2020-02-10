@@ -1,0 +1,6 @@
+- name: Yum test
+  hosts: all
+  tasks:
+    - service:
+        name: httpd
+        state: status

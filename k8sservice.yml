@@ -1,8 +1,6 @@
----
-- name: set test namespace to {{ state }}
-  k8s:
-    api_version: v1
-    kind: Namespace
-    name: test
-    state: "{{ state }}"
-  ignore_errors: true
+-
+  name: Create a new file named names in the current directory
+  hosts: localhost
+  roles:
+  -
+    example-role

@@ -1,6 +1,17 @@
--
-  name: Create a new file named names in the current directory
-  hosts: localhost
-  roles:
-  -
-    example-role
+--- 
+- 
+  name: "Close firewalld"
+  service: "name=firewalld state=stopped enabled=no"
+- 
+  failed_when: false
+  name: "Temply close selinux"
+  shell: "setenforce 0"
+- 
+  lineinfile: 
+    dest: /etc/selinux/config
+    line: SELINUX=disabled
+    regexp: ^SELINUX=
+  name: "Permanent selinux"
+- 
+  name: "Add EPEL repo"
+  yum: "name=epel-release state=latest"

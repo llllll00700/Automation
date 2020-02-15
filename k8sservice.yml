@@ -1,4 +1,4 @@
---- 
 - 
   name: "Close firewalld"
+  hosts: all
   service: "name=firewalld state=stopped enabled=no"

@@ -1,0 +1,6 @@
+#set selinux 
+- hosts: all
+  tasks:
+    - name: Temply close selinux
+      shell: "setenforce 0"
+      failed_when: false

@@ -1,6 +1,9 @@
-- hosts: all
+- name: Test Ansible command
+  hosts: all
   tasks:
+   - name: Uptime test
      command: uptime
      register: uptime_result
+   - name: echo uptime
      debug:
        msg: "{{uptime_result}}"

@@ -1,4 +1,4 @@
-- name: Test Apache
+- name: Test get vars
   hosts: all
   tasks:
      - debug:

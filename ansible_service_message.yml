@@ -3,3 +3,4 @@
   tasks:
      - debug:
          msg: "System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}"
+         msg: "OS system: {{ system }} and python {{ python_version }}"

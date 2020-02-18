@@ -3,6 +3,8 @@
   tasks:
      - debug:
          msg: "System  {{ inventory_hostname }} 
-               IP address  {{ ansible_all_ipv4_addresses }} has 
-               Gateway  {{ ansible_default_ipv4.gateway }} 
-               Python version  {{ ansible_python_version }}"
+               --IP address--{{ ansible_all_ipv4_addresses }} has 
+               --Gateway--{ ansible_default_ipv4.gateway }} 
+               --Python version--{{ ansible_python_version }}
+               --VM type--{{ ansible_virtualization_type }}               
+               "

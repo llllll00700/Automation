@@ -1,3 +1,5 @@
 - name: Test Ansible Shell/command
   hosts: all
-  shell: ping "{{ansible_default_ipv4.gateway}}"
+  tasks:
+    - name: Running shell
+      shell: ping "{{ansible_default_ipv4.gateway}}"

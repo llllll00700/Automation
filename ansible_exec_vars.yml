@@ -1,0 +1,8 @@
+- hosts: localhost
+  remote_user: admin
+  vars:
+   http_port: 80
+  tasks:
+   - name: insert firewalld rule for httpd
+     firewalld: port={{ http_port }}/tcp permanent=true state=enabled immediate=yes
+  check_mode: yes

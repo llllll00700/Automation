@@ -2,3 +2,6 @@
   hosts: all
   tasks:
    - shell: uptime
+     register: uptime_result
+     debug:
+       msg: "{{uptime_result}}"

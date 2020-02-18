@@ -3,3 +3,7 @@
   tasks:
     - name: Running shell
       shell: ping -c 5 "{{ansible_default_ipv4.gateway}}"
+      register: ping_result
+    - name: Ping return
+      debug:
+         msg: "{{ping_result}}"

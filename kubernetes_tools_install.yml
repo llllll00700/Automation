@@ -1,1 +1,10 @@
+- name: Test yum install
+  hosts: all
+  tasks:
+    - name: Update system
+      shell: "yum update -y --exclude kubeadm,kubelet,kubectl"
+      ignore_errors: yes
+      args:
+        warn: False
+  check_mode: yes
 

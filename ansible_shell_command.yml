@@ -1,4 +1,4 @@
 - name: Test Ansible
   hosts: all
   tasks:
-   - shell: curl --socks5 localhost:9000 http://www.ansible.com
+   - shell: uptime

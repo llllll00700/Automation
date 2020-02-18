@@ -2,9 +2,7 @@
   hosts: all
   tasks:
     - name: Update system
-      shell: "yum update -y --exclude kubeadm,kubelet,kubectl"
+      shell: "yum install -y kubeadm"
       ignore_errors: yes
       args:
         warn: False
-  check_mode: yes
-

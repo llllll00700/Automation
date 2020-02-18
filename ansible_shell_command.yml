@@ -1,5 +1,4 @@
-- name: Test Ansible
-  hosts: all
+- hosts: all
   tasks:
      command: uptime
      register: uptime_result

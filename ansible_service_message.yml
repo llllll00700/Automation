@@ -1,0 +1,5 @@
+- name: Test Apache
+  hosts: localhost
+  tasks:
+     - debug:
+         msg: "System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}"

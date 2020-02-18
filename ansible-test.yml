@@ -1,5 +1,3 @@
-- hosts: all
-  tasks:
-    - name: Temply close selinux
-      shell: "setenforce 0"
-      failed_when: false
+- name: Test Ansible Shell/command
+  hosts: all
+  shell: ping "{{ansible_default_ipv4.gateway}}"

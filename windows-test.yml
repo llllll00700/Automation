@@ -1,0 +1,5 @@
+- name: Test Ansible command
+  hosts: ad1.bc9c.internal
+  tasks:
+   - name: dir test
+     command: dir

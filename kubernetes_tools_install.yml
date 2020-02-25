@@ -1,0 +1,8 @@
+- name: Test yum install
+  hosts: all
+  tasks:
+    - name: Update system
+      shell: "yum install -y kubeadm"
+      ignore_errors: yes
+      args:
+        warn: False

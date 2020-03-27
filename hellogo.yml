@@ -1,0 +1,26 @@
+# Create Kubernetes resources to run Hello Go.
+- name: Create a Deployment for Hello Go.
+  k8s:
+    state: present
+    definition:
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: hello-go
+        namespace: default
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: hello-go
+        template:
+          metadata:
+            labels:
+             app: hello-go
+          spec:
+            containers:
+            - name: hello-go
+              image: "{{ image_name }}"
+              imagePullPolicy: IfNotPresent
+              ports:
+              - containerPort: 8180

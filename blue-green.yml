@@ -2,4 +2,7 @@
   hosts: all
   tasks:
    - name: OC login
-     command: oc login -u admin -p r3dh4t1! && oc set env dc/cotd2 SELECTOR=cities
+     command: oc login -u admin -p r3dh4t1!
+
+   - name: Set Env
+     command: oc set env dc/cotd2 SELECTOR=cities

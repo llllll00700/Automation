@@ -2,4 +2,4 @@
   hosts: all
   tasks:
    - name: Uptime test
-     command: oc set env dc/cotd2 SELECTOR=cities
+     command: oc login -u admin -p r3dh4t1! 8be3-deployments-demo && oc set env dc/cotd2 SELECTOR=cities

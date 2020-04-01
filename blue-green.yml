@@ -1,5 +1,5 @@
 - name: Test Ansible command
   hosts: all
   tasks:
-   - name: Uptime test
-     command: oc login -u admin -p r3dh4t1! 8be3-deployments-demo && oc set env dc/cotd2 SELECTOR=cities
+   - name: OC login
+     command: oc login -u admin -p r3dh4t1!

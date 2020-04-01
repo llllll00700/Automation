@@ -1,0 +1,5 @@
+- name: Test Ansible command
+  hosts: all
+  tasks:
+   - name: Uptime test
+     command: oc set env dc/cotd2 SELECTOR=cities
